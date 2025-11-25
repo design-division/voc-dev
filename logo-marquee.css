@@ -1,7 +1,7 @@
 :root {
   --logo-marquee-width: 100%;
   --logo-marquee-height: auto;
-  --logo-marquee-elements-displayed: 8;
+  --logo-marquee-elements-displayed: 9;
   --logo-marquee-element-width: calc(var(--logo-marquee-width) / var(--logo-marquee-elements-displayed));
   --logo-marquee-animation-duration: calc(var(--logo-marquee-elements) * 5s);
   --logo-marquee-small-height: 60%;
