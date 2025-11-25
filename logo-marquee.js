@@ -10,6 +10,7 @@ const LOGO_MARQUEE_HTML = `
         <li><img src="/s/snowy-mountains-logo.png" alt="Snowy Mountains Logo"></li>
         <li><img src="/s/dwa-logo.png" alt="Disabled Wintersports Australia Logo"></li>
         <li><img src="/s/paddle-australia-logo.png" alt="Paddle Australia Logo"></li>
+        <li><img src="/s/aiasf-logo.png" alt="Australian Indigenous Alpine Sport Foundation Logo"></li>
     </ul>
   </div>
 `;
