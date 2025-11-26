@@ -124,6 +124,7 @@ body.compensate-for-scrollbar {
 .fancybox-toolbar {
     right: 0;
     top: 0;
+    padding: 0px;
 }
 .fancybox-stage {
     direction: ltr;
@@ -439,6 +440,9 @@ body.compensate-for-scrollbar {
     right: 0;
     text-align: center;
     z-index: 99996;
+
+    //DD
+    display: none;
 }
 @supports (padding: max(0px)) {
     .fancybox-caption {
@@ -809,10 +813,16 @@ body.lightbox-is-open {
     width: 100%;
 }
 .c-lightbox__overlay {
-    background: rgba(0, 0, 0, 0.95);
+    //background: rgba(0, 0, 0, 0.95);
+    background-color: ~"hsla(var(--black-hsl), 0.2)";
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 .c-lightbox[data-type="inline"]:not([data-group]) .c-lightbox__overlay {
-    background: rgba(0, 0, 0, 0.4);
+    //background: rgba(0, 0, 0, 0.4);
+    background-color: ~"hsla(var(--black-hsl), 0.2)";
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 .c-lightbox.fancybox-is-open .c-lightbox__overlay {
     opacity: 1;
@@ -1190,7 +1200,7 @@ body:not(.sqs-seven-one) .c-lightbox__content-inner p {
 }
 .c-lightbox__toolbar {
     display: flex;
-    padding: 3px;
+    //padding: 3px;
 }
 .c-lightbox__toolbar .c-lightbox__button {
     box-sizing: content-box;
@@ -1350,3 +1360,209 @@ body:not(.sqs-seven-one) .c-lightbox__content-inner p {
 .c-lightbox .fluid-engine {
     --grid-gutter: 0 !important;
 }
+
+
+/*DD EDITS*/
+/*LIGHTBOX - All Devices*/
+
+/*
+
+.c-lightbox__content-wrapper,
+.c-lightbox__content-inner {
+    height: fit-content !important;
+    padding: 0rem !important;
+
+    .page-section .content-wrapper {
+        padding: ~"calc(var(--sqs-site-gutter) * 1)" !important;
+    }
+}
+
+.fancybox-slide .c-lightbox__slide {
+    border-radius: var(--br-med) !important;
+}*/
+
+html .c-lightbox__content-inner {
+    section[id*="lb-banner"] {
+        height: 50vh !important;
+        min-height: 50vh !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        box-sizing: border-box;
+    }
+
+    section[id*="lb-banner"] .content-wrapper {
+        height: 100% !important;
+        min-height: 100% !important;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding-top: ~"calc(var(--sqs-site-gutter) * 1)" !important;
+        padding-bottom: ~"calc(var(--sqs-site-gutter) * 1)" !important;
+
+        h2,
+        h3 {
+            margin: 0rem !important;
+        }
+    }
+
+    section[id*="lb-banner"] .content-wrapper>div,
+    section[id*="lb-banner"] .content-wrapper div {
+        height: 100% !important;
+        min-height: 100% !important;
+    }
+
+    section[id*="lb-banner"] .sqs-html-content {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        height: 100% !important;
+    }
+}
+
+/*
+.c-lightbox__caption {
+    display: none !important;
+}
+
+.c-lightbox__toolbar {
+    padding: 0px !important;
+}*/
+
+/*
+//Lightbox Icons
+.c-lightbox .c-lightbox__button--arrow_right:before,
+.c-lightbox .c-lightbox__button--arrow_left:before,
+.c-lightbox .c-lightbox__button--close:before, .c-lightbox .fancybox-close-small:before {
+    font-size: 180% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: @dark;
+    font: var(--fa-font-sharp-solid);
+    font-weight: 300;
+    height: 20px;
+    width: 20px;
+    line-height: 1rem;
+}
+
+.c-lightbox .c-lightbox__button--arrow_right:before {
+    content: "\f054";
+    right: 0rem;
+}
+
+.c-lightbox .c-lightbox__button--arrow_left:before {
+    content: "\f053";
+    right: 0rem;
+}
+
+.c-lightbox__button--close:before, .c-lightbox .fancybox-close-small:before {
+    content: "\f00d";
+    right: 0;
+    top: 0;
+}
+
+.fancybox-button--close.c-lightbox__button--close {
+    padding: 2.5vh !important;
+}
+
+.c-lightbox .c-lightbox__button--arrow_left svg,
+.c-lightbox .c-lightbox__button--arrow_right svg,
+.c-lightbox .c-lightbox__button svg, .c-lightbox .fancybox-close-small svg {
+    display: none;
+}
+.fancybox-slide--html .fancybox-close-small {
+    opacity: 1 !important;
+    top: 2% !important;
+    right: 1.5% !important;
+}
+
+.c-lightbox .c-lightbox__button--arrow_left,
+.c-lightbox .c-lightbox__button--arrow_right {
+    margin: 2.5vh;
+}
+
+.c-lightbox .c-lightbox__button--arrow_left div,
+.c-lightbox .c-lightbox__button--arrow_right div {
+    display: none !important;
+}
+//End of Icons
+
+
+.c-lightbox__content-wrapper,
+.c-lightbox__content-inner {
+    //overflow: scroll !important;
+    //border-radius: var(--br-med) !important;
+}*/
+/*MTB TRAIL LB ONLY
+#lightbox__videos_block-yui_3_17_2_1_1764062099588_1903__content {
+    max-width: 950px !important;
+    height: auto;
+    .c-lightbox__content-wrapper, .c-lightbox__content-inner {
+        height: unset !important;
+    }
+}*/
+
+/*LIGHTBOX - Laptops & above
+@media only screen and (min-width: 62em) {
+
+    .c-lightbox__content {
+        overflow: scroll !important;
+        margin-bottom: unset !important;
+        max-width: 950px !important;
+    }
+
+}*/
+
+/*LIGHTBOX - Phones & Tablets*/
+@media only screen and (max-width: 62em) {
+
+    .c-lightbox .c-lightbox__button--arrow_right:before,
+    .c-lightbox .c-lightbox__button--arrow_left:before,
+    .c-lightbox .c-lightbox__button--close:before, .c-lightbox .fancybox-close-small:before {
+        font-size: 150% !important;
+    }
+
+    .c-lightbox .c-lightbox__button--arrow_left,
+    .c-lightbox .c-lightbox__button--arrow_right {
+        //margin: ~"calc(var(--sqs-site-gutter) * 0.5)";
+        margin: 0rem;
+    }
+
+    button.fancybox-button.fancybox-button--arrow_right.c-lightbox__button.c-lightbox__button--arrow_right,
+    button.fancybox-button.fancybox-button--arrow_left.c-lightbox__button.c-lightbox__button--arrow_left,
+    button.fancybox-button.fancybox-button--close.c-lightbox__button.c-lightbox__button--close {
+        background: @light  !important;
+        border-radius: 300px !important;
+        padding: 0.5rem !important;
+        width: auto !important;
+        height: auto;
+        margin: 0.5rem;
+    }
+
+    html .c-lightbox[data-type=inline] .c-lightbox__slide {
+        padding: ~"calc(var(--sqs-site-gutter) * 0.5)" !important;
+    }
+
+    html .c-lightbox__nav-dots {
+        display: none;
+    }
+
+    html .c-lightbox__nav {
+        box-sizing: border-box;
+        z-index: 999999 !important;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+    }
+
+    html .c-lightbox__content-inner {
+        section[id*="lb-banner"] {
+            height: 30vh !important;
+            min-height: 30vh !important;
+        }
+    }
+
+}
+
+/* end Lightbox - Custom Styles */
