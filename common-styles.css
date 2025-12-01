@@ -116,7 +116,7 @@
 }
 
 
-/*CONTACT FORM*/
+/*Contact Form*/
 .form-field-checkbox-fill-outline.form-field-checkbox-color-inverted .sqs-site-style-form .form-item.checkbox label input[type="checkbox"]:checked {
     background-color: @dark  !important;
 }
@@ -170,3 +170,8 @@ fieldset#checkbox-598945f0-8359-4f49-8d4d-12be1666f69c {
     }
 }
 
+
+/*Rounded Image Corners*/
+.sqs-image-shape-container-element {
+    border-radius: var(--br-med);
+}
